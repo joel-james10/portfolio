@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UXBoost</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #f7fafc;
+      color: #2d3748;
+      margin: 0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    header {
+      background-color: #2c5282;
+      color: white;
+      padding: 22px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.12);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-container svg {
+      width: 48px;
+      height: 48px;
+      fill: none;
+      stroke: white;
+      stroke-width: 3;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+    nav {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:first-child {
+      margin-left: 0;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+      border-radius: 1px;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #f6ad55;
+    }
+    nav a:hover::after,
+    nav a:focus::after {
+      background-color: #f6ad55;
+    }
+
+    main.container {
+      max-width: 900px;
+      margin: 45px auto 70px;
+      padding: 0 20px;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 28px 36px;
+      box-shadow: 0 6px 18px rgba(44, 82, 130, 0.1);
+      margin-bottom: 36px;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 8px 22px rgba(44, 82, 130, 0.18);
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #2c5282;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.85rem;
+      letter-spacing: 0.05em;
+    }
+    ul {
+      list-style: inside disc;
+      padding-left: 0;
+      margin: 0;
+      color: #4a5568;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.1rem;
+    }
+    ul li {
+      margin-bottom: 14px;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.1rem;
+      color: #4a5568;
+      line-height: 1.65;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background-color: #edf2f7;
+      color: #718096;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      user-select: none;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+      nav {
+        margin-top: 12px;
+        width: 100%;
+        text-align: center;
+      }
+      nav a {
+        margin: 0 12px;
+      }
+      main.container {
+        margin: 30px 15px 50px;
+        padding: 0 10px;
+      }
+      section {
+        padding: 20px 22px;
+        margin-bottom: 28px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p, ul {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container" aria-label="UXBoost Logo" role="img">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="30" />
+        <path d="M20 36 L32 24 L44 36" />
+        <path d="M32 24 L32 44" />
+        <circle cx="32" cy="44" r="4" />
+      </svg>
+      <h1>UXBoost</h1>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="overview">
+      <h2>About UXBoost</h2>
+      <p>UXBoost is a user experience toolkit offering designers and developers a suite of resources to analyze, test, and improve website interfaces and user journeys.</p>
+    </section>
+
+    <section id="tools">
+      <h2>Tools Provided</h2>
+      <ul>
+        <li><strong>Heatmap Analyzer:</strong> Understand user clicks and scroll patterns.</li>
+        <li><strong>A/B Testing Suite:</strong> Launch experiments and compare performance across design variations.</li>
+        <li><strong>Persona Generator:</strong> Create detailed user profiles to guide decision-making.</li>
+      </ul>
+    </section>
+
+    <section id="guide">
+      <h2>UX Best Practices</h2>
+      <p>Learn key principles of user-centered design, including usability heuristics, accessibility considerations, and mobile-first strategies.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UXBoost. All rights reserved.</p>
+  </footer>
+</body>
+</html>

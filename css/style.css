@@ -1,0 +1,94 @@
+
+/* style.css - Creative Theme for Portfolio and NovaPixel */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #ff6584;
+  --background-color: #fefefe;
+  --text-color: #333;
+  --header-color: #1e1e2f;
+  --highlight-color: #f0f0ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: var(--header-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--highlight-color);
+  padding-bottom: 0.4rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background-color: var(--highlight-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Blog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header.site-header {
+      background-color: #007acc;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo svg {
+      width: 50px;
+      height: 50px;
+      fill: white;
+    }
+    .logo h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.1em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 30px;
+    }
+    main.posts {
+      flex: 3;
+    }
+    article.post {
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    article.post h2 {
+      margin-top: 0;
+      color: #007acc;
+    }
+    article.post p.meta {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+    article.post a.read-more {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    article.post a.read-more:hover {
+      text-decoration: underline;
+    }
+    aside.sidebar {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    aside.sidebar h3 {
+      margin-top: 0;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      color: #007acc;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    aside.sidebar ul li {
+      margin-bottom: 12px;
+    }
+    aside.sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+    aside.sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    footer.site-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 60px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Modern Blog Logo">
+        <rect width="100" height="100" rx="15" ry="15" />
+        <text x="50%" y="60%" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="50" fill="#007acc" dy=".35em">MB</text>
+      </svg>
+      <h1>Modern Blog</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Posts</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="posts">
+      <article class="post">
+        <h2>Welcome to Modern Blog</h2>
+        <p class="meta">Posted on May 16, 2025 by Joel James</p>
+        <p>This is your new blog where you can share insights about web development, programming, and design. Stay tuned for tutorials, tips, and industry news.</p>
+        <a href="#" class="read-more">Read more</a>
+      </article>
+      <article class="post">
+        <h2>Building Responsive Websites</h2>
+        <p class="meta">Posted on May 10, 2025 by Joel James</p>
+        <p>Learn how to create beautiful layouts that look great on any device using modern CSS techniques like Flexbox and Grid.</p>
+        <a href="#" class="read-more">Read more</a>
+      </article>
+    </main>
+
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">CSS Tricks</a></li>
+        <li><a href="#">Productivity</a></li>
+      </ul>
+
+      <h3>Recent Posts</h3>
+      <ul>
+        <li><a href="#">Tips for Clean Code</a></li>
+        <li><a href="#">Flexbox vs. Grid</a></li>
+        <li><a href="#">Best Dev Tools</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2025 Modern Blog. All rights reserved.
+  </footer>
+</body>
+</html>
