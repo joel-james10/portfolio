@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nova Solutions | Tech & Web Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("mNL2VVtKRGt3mKIKj"); // Your EmailJS public key
+    })();
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9fafb, #eef1f6);
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header .unique-banner {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      font-size: 0.9rem;
+      background: linear-gradient(90deg, #4f46e5, #38bdf8);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      color: white;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    header .unique-banner::before {
+      content: "✨";
+      font-size: 1.2rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #2563eb;
+      padding-left: 1rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+    .service h3 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #1d4ed8;
+    }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .logo {
+      max-width: 140px;
+      margin-bottom: 1.5rem;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="unique-banner">Empowering Brands Digitally</div>
+    <img src="images/nova-solutions..png" alt="Nova Solutions Logo" class="logo" />
+    <h1 style="font-size: 2.75rem;">Nova Solutions</h1>
+    <p style="font-size: 1.25rem; margin-top: 0.5rem;">Your Partner in Web & Tech Innovation</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        We are Nova Solutions — a forward-thinking tech and web studio helping businesses level up their online presence. We blend creativity, strategy, and code to deliver custom solutions that work beautifully and function flawlessly.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Custom Web Design</h3>
+          <p>We craft responsive websites tailored to your brand's identity and goals. Clean design, smart UX, and mobile-first layouts included.</p>
+        </div>
+        <div class="service">
+          <h3>eCommerce Development</h3>
+          <p>Get your store online fast with intuitive product pages, cart integration, and smooth payment gateways.</p>
+        </div>
+        <div class="service">
+          <h3>SEO & Performance</h3>
+          <p>Boost search visibility and site speed with technical SEO, content tuning, and page load optimization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="user_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Nova Solutions. Crafted with care & creativity.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = this;
+      const button = form.querySelector('button');
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      // Send email to owner
+      emailjs.sendForm('nova-solutions', 'template_ayvzc3w', form)
+        .then(() => {
+          // Send confirmation email to user
+          return emailjs.send('nova-solutions', 'template_geip2er', {
+            user_name: form.user_name.value,
+            user_email: form.user_email.value,
+            message: form.message.value,
+          });
+        })
+        .then(() => {
+          alert('Message sent successfully! Confirmation email has been sent to you as well.');
+          form.reset();
+        })
+        .catch((error) => {
+          alert('Failed to send message. Please try again later.\nError: ' + JSON.stringify(error));
+        })
+        .finally(() => {
+          button.disabled = false;
+          button.textContent = 'Send Message';
+        });
+    });
+  </script>
+</body>
+</html>
