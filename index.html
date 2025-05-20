@@ -4,12 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joel James | Web Developer</title>
-  <link rel="stylesheet" href="css/style.css" />
   <meta name="description" content="Joel James – Web Developer specializing in HTML, CSS, JavaScript, and responsive web design. View portfolio and contact info.">
+  <style>
+    /* General resets and fonts */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header img {
+      height: 60px;
+      vertical-align: middle;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 0.2rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
+      color: #1e3a8a;
+    }
+    ul {
+      list-style: inside disc;
+      margin-top: 10px;
+      color: #444;
+    }
+    /* Projects container */
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    /* Each project card */
+    .project {
+      background: white;
+      border-radius: 12px;
+      box-shadow:
+        0 2px 6px rgba(0,0,0,0.1),
+        0 10px 15px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    /* 3D hover effect */
+    .project:hover {
+      transform: translateY(-10px) rotateX(3deg) rotateY(3deg);
+      box-shadow:
+        0 15px 30px rgba(0,0,0,0.2),
+        0 20px 40px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .project h3 {
+      color: #2563eb;
+      margin-bottom: 0.7rem;
+      font-size: 1.4rem;
+    }
+    .project p {
+      flex-grow: 1;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .project img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .project a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      align-self: flex-start;
+      transition: color 0.3s ease;
+    }
+    .project a:hover {
+      color: #1e40af;
+      text-decoration: underline;
+    }
+    /* Contact Section */
+    #contact p, #about p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    /* Skills list */
+    #skills ul {
+      padding-left: 20px;
+    }
+    #skills li {
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #666;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Joel James Logo" style="height:60px; vertical-align:middle;">
+    <img src="images/logo.png" alt="Joel James Logo" />
     <h1>Joel James</h1>
     <p>Web Developer | HTML, CSS, JavaScript</p>
   </header>
@@ -36,24 +161,31 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      
+
       <div class="project">
         <h3>Modern Blog Template</h3>
         <p>A clean and content-focused blog layout built with semantic HTML and styled using custom CSS for an elegant reading experience. Includes interactive post previews and responsive sidebar.</p>
         <img src="images/project2.jpg" alt="Modern Blog Template" />
-        <p><a href="modernBlog/logo1.html" target="_blank">View Project</a></p>
+        <p><a href="modernBlog/logo1.html" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
 
       <div class="project">
         <h3>DevConnect</h3>
         <p>DevConnect is a platform where developers and tech enthusiasts connect, collaborate, and contribute to each other's growth through community boards, project spaces, and insights.</p>
-        <p><a href="devconnect/index.html" target="_blank">View Project</a></p>
+        <p><a href="devconnect/index.html" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
 
       <div class="project">
         <h3>UXBoost</h3>
         <p>UXBoost is a UX toolkit that helps designers improve user experiences using heatmaps, A/B tests, persona builders, and best-practice guides.</p>
-        <p><a href="uxboost/index.html" target="_blank">View Project</a></p>
+        <p><a href="uxboost/index.html" target="_blank" rel="noopener noreferrer">View Project</a></p>
+      </div>
+
+      <div class="project">
+        <h3>Nova Solutions</h3>
+        <p>Nova Solutions is a tech and web services studio that empowers brands digitally with modern, responsive websites and smart tech solutions.</p>
+        <img src="images/nova-solutions..png" alt="Nova Solutions Project" />
+        <p><a href="nova-solutions-contact/index.html" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
     </section>
 
@@ -61,11 +193,11 @@
       <h2>Contact</h2>
       <p>If you'd like to work together or have any questions, feel free to reach out!</p>
       <p>Email: 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joeljamesjweb123@gmail.com" target="_blank">
-          joeljamesjweb123@gmail.com
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joeljweb123@gmail.com" target="_blank" rel="noopener noreferrer">
+          joeljweb123@gmail.com
         </a>
       </p>
-      <p>Fiverr: <a href="https://www.fiverr.com/wern_heisenberg" target="_blank">fiverr.com/joeljames</a></p>
+      <p>Fiverr: <a href="https://www.fiverr.com/wern_heisenberg" target="_blank" rel="noopener noreferrer">fiverr.com/joeljames</a></p>
     </section>
   </div>
 
